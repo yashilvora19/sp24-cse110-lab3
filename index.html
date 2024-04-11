@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Meeting Minutes</title>
+  </head>
+  <body>
+    <header>
+        <h1>Description: Weekly Meeting Minutes: CSE 110 Team 6 (Spring '24')</h1>
+        <nav>
+            <ul>
+                <li><a href="#attendees">Attendees</a></li>
+                <li><a href="#todays-agenda">Today's Agenda</a></li>
+                <li><a href="#action-items-for-next-week">Action Items</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Date: 04/12/2024</h2>
+            <p><strong>Topic:</strong> Ideation and Planning for Project</p>
+        </section>
+
+        <section id="attendees">
+            <h3>Attendees</h3>
+            <ol>
+                <li>Yashil Vora</li>
+                <li>Yash Ilvora</li>
+                <li>Yas Hilvora</li>
+            </ol>
+        </section>
+
+        <section id="todays-agenda">
+            <h3>Today's Agenda</h3>
+            <ul>
+                <li>Weekly updates of what everyone has worked on</li>
+                <li>Brainstorming and finalizing ideas in the ideation process</li>
+                <li>Naming our team and finishing branding</li>
+                <li>Planning action items for next week</li>
+            </ul>
+            <p>It is important to work <i>together</i> as a team. <br>As the saying goes, <em>"Teamwork makes Dreamwork!"</em></p>
+            <img src="teamwork.jpg" alt="teamork">
+
+            <h4><b>Unfinished Business</b></h4>
+            <p>Finalizing team name and logo</p>
+            <h4><b>New Business</b></h4>
+            <p>Branding merch for the team!</p>
+        </section>
+        <section id="action-items-for-next-week">
+            <h3>Action Items (for next week)</h3>
+            <ul>
+                <li>Task 1: ___________</li>
+                <li>Task 2: ___________</li>
+                <li>Task 3: ___________</li>
+                <li>Task 4: ___________</li>
+            </ul>
+        </section>
+        <hr>
+        <div>
+            <details>
+                <summary><b>Here is a summary of the meeting</b></summary>
+                <p>
+                    We discussed and brainstormed new ideas- mainly surrounding the name and branding of our team.
+                    Initially, everyone gave their updates after which we discussed some more details and then 
+                    decided action items for next week!
+                </p>
+                <summary><b>Here are options for our next social</b></summary>
+                <p>Ice skating, bowling, arcade</p>
+            </details>
+            <h3>Media from meeting</h3>
+            <p>Our organization is now live <a href="https://github.com/CSE-110-Team-6">here</a>!</p>
+            <p><span style="color: blue;">An interesting thought: Naming our team <strong>around the theme</strong> of our project</span> to increase recognizability.</p>
+            <p>Video for an important agorithm we may use: </p>
+            <video width="400" controls>
+                <source src="karatsuba.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Audio feedback from TA on work done up till now:</p>
+            <audio controls>
+                <source src="message_from_ta.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+              </audio>
+        </div>
+        <hr>
+        <section>
+            <h4>Please fill out this form for the social!</h4>
+            <form>
+                <fieldset>
+                    <legend>Team Social</legend>
+                    <label for="name">Your Name</label><br>
+                    <input type="text" id="name" name="name" size="50"><br>
+                    
+                    <label>
+                        <input type="radio" name="event" value="arcade">
+                        Arcade
+                    </label><br>
+                    <label>
+                        <input type="radio" name="event" value="bowling">
+                        Bowling
+                    </label><br>
+                    <label>
+                        <input type="radio" name="event" value="skating">
+                        Ice Skating
+                    </label><br>
+        
+                    <label>Date:</label>
+                    <input type="date" name="date"><br>
+                    
+                    <label>Any dietary restrictionz:</label><br>
+                    <textarea name="comments" rows="3" cols="40"></textarea><br>
+                    <!-- BACKEND, FRONTEND OR DESIGN -->
+                    <label for="team">Team:</label><br>
+                    <input list="teams" id="team-choice" name="team-choice">
+                    <datalist id="teams">
+                        <option value="Backend">
+                        <option value="Frontend">
+                        <option value="Design">
+                    </datalist><br>
+                    
+                    <!-- Number of guests you'll bring -->
+                    <label>Number of Guests:</label>
+                    <select name="guests">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4+">4+</option>
+                    </select><br>
+        
+                    <label>Time of the day:</label><br>
+                    <label>
+                        <input type="checkbox" name="time" value="morning">
+                        Morning
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="time" value="afternoon">
+                        Afternoon
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="time" value="evening">
+                        Evening
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="time" value="evening">
+                        Night
+                    </label><br>
+                    <label for="comments">Additional Comments:</label><br>
+                    <input type="text" id="comments" name="comments" size="50"><br>
+                    <button type="submit">Submit</button>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>These are the meeting minutes for the team meetings held every Wednesday from 9-10 am.</p>
+    </footer>
+  </body>
+</html>

@@ -19,6 +19,10 @@ body {
   padding: 10px;
   border: 1px solid black;
 }
+h1 {
+  font-family: 'Jersey 25', sans-serif;
+}
+/* font-family: 'Jersey 25', sans-serif; */
 
 /* universal selector */
 /* * {
@@ -35,15 +39,19 @@ p {
 }
 
 /* attribute selector */
-a[href="https://github.com/CSE-110-Team-6"] {
-  color: rgb(241, 7, 15);
+a[href="https://github.com/cse110-sp24-group6/cse110-sp24-group6  "] {
+  color:rgba(255, 0, 0, 0.8);;
   text-decoration: underline;
+  
+}
+a:active {
+  background-color: yellow;
 }
 
 /* pseudo-class selector + hover */
 button:hover {
-  background-color: #000000;
-  color: rgb(255, 255, 47);
+  background-color: color(display-p3 1 0 0.331); /* vibrant pink color */
+  color: color-mix(in srgb, #34c9eb 20%, rgb(241, 254, 57));;
 }
 
 /* selector list */
@@ -64,11 +72,13 @@ div summary {
 /* Child Combinator (element > element) */
 ul > li {
   color: green;
+  font-size: 0.9rem;
 } 
 
 /* Adjacent sibling combinator (element + element) */
 h2 ~ p {
   font-style: italic;
+  text-align: center;
 }
 /* General sibling combinator (element ~ element) */
 h4 + p {
@@ -78,28 +88,32 @@ h4 + p {
 /* Combining Two Selectors (element.class) */
 a.button {
   display: inline-block;
-  padding: 3px 7px;
+  padding: 5px 10px;
   background-color: #0099cc;
   color: white;
   /* text-decoration: none; */
-  border-radius: 5px;
+  border-radius: 10pt;
+  width: 5vw
 }
 
 /* Nested selectors */
 h2:has(+ p) {
   text-decoration: underline;
 }
-
+:root {
+  --main-color: #9ecbfb; /* Default main color */
+}
 /* Nested Selectors */
 .parent-rule {
   /* Styles for elements with class 'parent-rule' */
-  background-color: #f0f0f0;
-  padding: 20px;
+  background-color: var(--main-color, rgb(13, 255, 227));
+  padding: 0.5cm;
   
 
   .child-rule {
     /* Styles for elements with class 'child-rule' that are descendants of elements with class 'parent-rule' */
     font-weight: bold;
     color: rgb(255, 0, 132);
+    font-size: 1em;
   }
 }

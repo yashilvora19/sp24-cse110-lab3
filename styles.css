@@ -1,0 +1,119 @@
+/* Comments */
+/* This is a comment in CSS */
+
+/* Colors */
+body {
+    background-color: #efcbe4; /* hex code */
+    color: hsl(0, 0%, 0%); /* hsl values */
+    color: rgb(68, 48, 10); /* color name */
+  }
+/* Class selector */
+.blue-text {
+  color: blue;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* id selector */
+#yellow-id {
+  background-color: hsla(58, 78%, 48%, 0.838);
+  padding: 10px;
+  border: 1px solid black;
+}
+h1 {
+  font-family: 'Jersey 25', sans-serif;
+}
+/* font-family: 'Jersey 25', sans-serif; */
+
+/* universal selector */
+/* * {
+  margin: 2;
+  padding: 2;
+  box-sizing: border-box;
+} */
+
+/* element selector */
+p {
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* attribute selector */
+a[href="https://github.com/cse110-sp24-group6/cse110-sp24-group6  "] {
+  color:rgba(255, 0, 0, 0.8);;
+  text-decoration: underline;
+  
+}
+a:active {
+  background-color: yellow;
+}
+
+/* pseudo-class selector + hover */
+button:hover {
+  background-color: color(display-p3 1 0 0.331); /* vibrant pink color */
+  color: color-mix(in srgb, #34c9eb 20%, rgb(241, 254, 57));;
+}
+
+/* selector list */
+h1, h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #043647;
+}
+
+/* Combinators */
+
+/* Descendant (element element) */
+div summary {
+  color: rgb(21, 21, 222);
+  font-weight: bold;
+  text-decoration: underline  ;
+}
+
+/* Child Combinator (element > element) */
+ul > li {
+  color: green;
+  font-size: 0.9rem;
+} 
+
+/* Adjacent sibling combinator (element + element) */
+h2 ~ p {
+  font-style: italic;
+  text-align: center;
+}
+/* General sibling combinator (element ~ element) */
+h4 + p {
+  color: red;
+}
+
+/* Combining Two Selectors (element.class) */
+a.button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #0099cc;
+  color: white;
+  /* text-decoration: none; */
+  border-radius: 10pt;
+  width: 5vw
+}
+
+/* Nested selectors */
+h2:has(+ p) {
+  text-decoration: underline;
+}
+:root {
+  --main-color: #9ecbfb; /* Default main color */
+}
+/* Nested Selectors */
+.parent-rule {
+  /* Styles for elements with class 'parent-rule' */
+  background-color: var(--main-color, rgb(13, 255, 227));
+  padding: 0.5cm;
+  
+
+  .child-rule {
+    /* Styles for elements with class 'child-rule' that are descendants of elements with class 'parent-rule' */
+    font-weight: bold;
+    color: rgb(255, 0, 132);
+    font-size: 1em;
+  }
+}

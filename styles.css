@@ -1,0 +1,105 @@
+/* Comments */
+/* This is a comment in CSS */
+
+/* Colors */
+body {
+    background-color: #efcbe4; /* hex code */
+    color: hsl(0, 0%, 0%); /* hsl values */
+    color: rgb(68, 48, 10); /* color name */
+  }
+/* Class selector */
+.blue-text {
+  color: blue;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* id selector */
+#yellow-id {
+  background-color: hsla(58, 78%, 48%, 0.838);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* universal selector */
+/* * {
+  margin: 2;
+  padding: 2;
+  box-sizing: border-box;
+} */
+
+/* element selector */
+p {
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* attribute selector */
+a[href="https://github.com/CSE-110-Team-6"] {
+  color: rgb(241, 7, 15);
+  text-decoration: underline;
+}
+
+/* pseudo-class selector + hover */
+button:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 47);
+}
+
+/* selector list */
+h1, h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #043647;
+}
+
+/* Combinators */
+
+/* Descendant (element element) */
+div summary {
+  color: rgb(21, 21, 222);
+  font-weight: bold;
+  text-decoration: underline  ;
+}
+
+/* Child Combinator (element > element) */
+ul > li {
+  color: green;
+} 
+
+/* Adjacent sibling combinator (element + element) */
+h2 ~ p {
+  font-style: italic;
+}
+/* General sibling combinator (element ~ element) */
+h4 + p {
+  color: red;
+}
+
+/* Combining Two Selectors (element.class) */
+a.button {
+  display: inline-block;
+  padding: 3px 7px;
+  background-color: #0099cc;
+  color: white;
+  /* text-decoration: none; */
+  border-radius: 5px;
+}
+
+/* Nested selectors */
+h2:has(+ p) {
+  text-decoration: underline;
+}
+
+/* Nested Selectors */
+.parent-rule {
+  /* Styles for elements with class 'parent-rule' */
+  background-color: #f0f0f0;
+  padding: 20px;
+  
+
+  .child-rule {
+    /* Styles for elements with class 'child-rule' that are descendants of elements with class 'parent-rule' */
+    font-weight: bold;
+    color: rgb(255, 0, 132);
+  }
+}

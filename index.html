@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Meeting Minutes</title>
   </head>
   <body>
@@ -12,20 +13,20 @@
             <ul>
                 <li><a href="#attendees">Attendees</a></li>
                 <li><a href="#todays-agenda">Today's Agenda</a></li>
-                <li><a href="#action-items-for-next-week">Action Items</a></li>
+                <li><a href="#action-items-for-next-week" class="button">Action Items</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
             <h2>Date: 04/12/2024</h2>
-            <p><strong>Topic:</strong> Ideation and Planning for Project</p>
+                <p><strong>Topic:</strong> Ideation and Planning for Project</p>
         </section>
 
         <section id="attendees">
             <h3>Attendees</h3>
-            <ol>
-                <li>Yashil Vora</li>
+            <ol class="parent-rule">
+                <li class="child-rule">Yashil Vora</li>
                 <li>Yash Ilvora</li>
                 <li>Yas Hilvora</li>
             </ol>
@@ -34,7 +35,7 @@
         <section id="todays-agenda">
             <h3>Today's Agenda</h3>
             <ul>
-                <li>Weekly updates of what everyone has worked on</li>
+                <li><span class="blue-text">Weekly updates of what everyone has worked on</span></li>
                 <li>Brainstorming and finalizing ideas in the ideation process</li>
                 <li>Naming our team and finishing branding</li>
                 <li>Planning action items for next week</li>
@@ -57,7 +58,7 @@
             </ul>
         </section>
         <hr>
-        <div>
+        <div id="yellow-id">
             <details>
                 <summary><b>Here is a summary of the meeting</b></summary>
                 <p>
@@ -149,6 +150,7 @@
                     <label for="comments">Additional Comments:</label><br>
                     <input type="text" id="comments" name="comments" size="50"><br>
                     <button type="submit">Submit</button>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">Click Me</a>
 
                 </fieldset>
             </form>

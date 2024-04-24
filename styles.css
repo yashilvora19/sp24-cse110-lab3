@@ -162,8 +162,86 @@ nav {
   margin-bottom: 20px;
   margin-left: 20px;
   width: 300px;
-  position: relative;
+  position: sticky;
 }
 header { 
-  position: absolute;
+  position: relative;
+}
+
+/* ADD LAYOUTS AND RESPONSIVENESS  */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+
+/* Apply Grid layout to the grid-container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+/* 
+/* Style individual grid items */
+.grid-item {
+  background-color: #e9a614;
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 5px;
+  /* border-color: #333; */
+  text-align: center;
+  margin: 10px;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+  .flex-container {
+      flex-direction: column;
+      height: auto;
+  }
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+/* Medium screens (tablets or smaller laptops) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust styles for medium screens */
+  body {
+      font-size: 16px;
+  }
+  .flex-container {
+      justify-content: center;
+  }
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 1025px) {
+  body {
+      font-size: 18px;
+  }
+  .flex-container {
+      justify-content: space-around;
+  }
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }

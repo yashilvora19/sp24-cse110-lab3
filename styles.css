@@ -22,20 +22,18 @@ body {
 h1 {
   font-family: 'Jersey 25', sans-serif;
 }
-/* font-family: 'Jersey 25', sans-serif; */
-
+/* 
 /* universal selector */
-/* * {
-  margin: 2;
-  padding: 2;
+* {
+  margin: 0.2cm;
   box-sizing: border-box;
-} */
+}
 
 /* element selector */
 p {
   font-family: Arial, sans-serif;
   line-height: 1.8;
-  margin-bottom: 10px;
+  margin: auto;
 }
 
 /* attribute selector */
@@ -51,7 +49,9 @@ a:active {
 /* pseudo-class selector + hover */
 button:hover {
   background-color: color(display-p3 1 0 0.331); /* vibrant pink color */
-  color: color-mix(in srgb, #34c9eb 20%, rgb(241, 254, 57));;
+  color: color-mix(in srgb, #34c9eb 20%, rgb(241, 254, 57));
+  margin: auto;
+  /* position: */
 }
 
 /* selector list */
@@ -103,6 +103,7 @@ h2:has(+ p) {
 :root {
   --main-color: #9ecbfb; /* Default main color */
 }
+
 /* Nested Selectors */
 .parent-rule {
   /* Styles for elements with class 'parent-rule' */
@@ -110,10 +111,137 @@ h2:has(+ p) {
   padding: 0.5cm;
   
 
-  .child-rule {
+  &.child-rule {
     /* Styles for elements with class 'child-rule' that are descendants of elements with class 'parent-rule' */
     font-weight: bold;
     color: rgb(255, 0, 132);
     font-size: 1em;
+  }
+}
+
+/* Style the box element */
+.box {
+  width: 500px;
+  padding: 2px 2px 1px 1px;
+  border-radius: 2px;
+  border-width: 5px;
+  border-color: #f52323;
+  border-style: solid;
+  margin: 10px 10px 20px 20px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.smallerBox {
+  width: 500px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+  padding-right: 1px;
+  border-radius: 1px;
+  border-width: 5px;
+  border-color: #f52323;
+  border-style: solid;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+footer {
+  display: none;
+}
+
+nav {
+  display: block;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 300px;
+  position: sticky;
+}
+header { 
+  position: relative;
+}
+
+/* ADD LAYOUTS AND RESPONSIVENESS  */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+
+/* Apply Grid layout to the grid-container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+/* 
+/* Style individual grid items */
+.grid-item {
+  background-color: #e9a614;
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 5px;
+  /* border-color: #333; */
+  text-align: center;
+  margin: 10px;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+  .flex-container {
+      flex-direction: column;
+      height: auto;
+  }
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+/* Medium screens (tablets or smaller laptops) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust styles for medium screens */
+  body {
+      font-size: 16px;
+  }
+  .flex-container {
+      justify-content: center;
+  }
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 1025px) {
+  body {
+      font-size: 18px;
+  }
+  .flex-container {
+      justify-content: space-around;
+  }
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr);
   }
 }
